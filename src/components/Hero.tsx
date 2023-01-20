@@ -4,7 +4,7 @@ import { Pagination, Autoplay, EffectFade } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/effect-fade'
-import styles from 'src/styles/swiper.module.css'
+import styles from '../styles/swiper.module.css'
 
 export function Hero() {
   return (
