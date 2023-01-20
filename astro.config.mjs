@@ -1,13 +1,9 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from 'astro/config'
 
 // https://astro.build/config
-import react from '@astrojs/react';
-import image from '@astrojs/image';
+import react from '@astrojs/react'
 
-// https://astro.build/config
-
-// https://astro.build/config
 export default defineConfig({
   site: 'https://rappicerrajeria.vehement.co',
-  integrations: [react(), image()]
-});
+  integrations: [react()]
+})

@@ -11,14 +11,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/image": "^0.12.1",
-    "@astrojs/react": "^1.2.2",
-    "@types/react-dom": "^18.0.6",
+    "@astrojs/image": "0.12.1",
+    "@astrojs/react": "1.2.2",
+    "@types/react-dom": "18.0.6",
     "astro": "1.9.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
     "react-icons": "4.7.1",
-    "swiper": "^8.4.6"
+    "swiper": "8.4.6"
   },
   "devDependencies": {
     "@types/react": "18.0.26",
