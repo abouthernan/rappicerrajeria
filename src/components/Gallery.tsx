@@ -24,7 +24,7 @@ export function Gallery() {
       >
         {gallery.map(({ id, image, alt }) => (
           <SwiperSlide key={id}>
-            <img src={image} alt={alt} />
+            <img src={image} alt={alt} width="100%" />
           </SwiperSlide>
         ))}
       </Swiper>
