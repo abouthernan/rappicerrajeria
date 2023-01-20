@@ -6,6 +6,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/effect-cards'
 import styles from '../styles/gallery.modules.css'
 import gallery from '../../public/data/gallery.json'
+import { Image } from '@astrojs/image/components'
 
 export function Gallery() {
   return (
@@ -24,7 +25,13 @@ export function Gallery() {
       >
         {gallery.map(({ id, image, alt }) => (
           <SwiperSlide key={id}>
-            <img src={image} alt={alt} width="300" height="300" />
+            <Image
+              src={image}
+              alt={alt}
+              width={300}
+              height={300}
+              format="webp"
+            />
           </SwiperSlide>
         ))}
       </Swiper>
