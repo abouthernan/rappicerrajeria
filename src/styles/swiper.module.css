@@ -1,0 +1,131 @@
+.swiper__bg {
+  background-color: var(--negro);
+  width: 100%;
+  height: 40rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+:global(.swiper__one) {
+  background-image: url('/hero-one.jpg');
+}
+
+:global(.swiper__two) {
+  background-image: url('/hero-two.jpg');
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.swiper__title {
+  color: var(--blanco);
+  font-size: 4rem;
+  font-weight: var(--font-md);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  margin: 1.5rem 0;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.swiper__title span {
+  font-size: 1.8rem;
+}
+
+.swiper__button {
+  display: block;
+  background: var(--naranja-claro);
+  color: var(--negro);
+  text-transform: uppercase;
+  max-width: var(--max-button);
+  transition: all 1s ease;
+  font-weight: var(--font-md);
+}
+
+.swiper__button:hover {
+  background: var(--morado-claro);
+  color: var(--blanco);
+}
+
+:global(.button__oscure) {
+  background: var(--morado-claro);
+  color: var(--blanco);
+}
+
+:global(.button__oscure):hover {
+  background: var(--naranja-claro);
+  color: var(--negro);
+}
+
+.payments__info {
+  color: var(--blanco);
+  font-weight: var(--font-normal);
+  text-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.payments__list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.payments__item {
+  width: 6rem;
+  height: 6rem;
+}
+
+.payments__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+:global(.swiper__two) .payments__info {
+  color: var(--morado-claro);
+  font-size: 2rem;
+  font-weight: var(--font-md);
+}
+
+:global(.mySwiper .swiper-pagination-bullet) {
+  width: 1rem;
+  height: 1rem;
+  opacity: 0.5;
+}
+
+:global(.mySwiper .swiper-pagination-bullet-active) {
+  background: var(--naranja-oscuro);
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .swiper__bg {
+    height: calc(100vh - 8rem);
+  }
+
+  .overlay {
+    gap: 2rem;
+  }
+
+  .swiper__title {
+    font-size: 7rem;
+  }
+
+  .swiper__title span {
+    font-size: 2.5rem;
+  }
+}

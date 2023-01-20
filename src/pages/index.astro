@@ -1,9 +1,48 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro"
+import { Hero } from "../components/Hero";
+import About from "../components/About.astro";
+import GridServices from "../components/Grid-services.astro";
+import Zones from "../components/Zones.astro";
+import Banner from "../components/Banner.astro";
+import Counter from "../components/Counter.astro";
+import Clients from "../components/Clients.astro";
+import { Gallery } from "../components/Gallery";
+import Partners from "../components/Partners.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Rappicerrajería - 24/7">
-  <a class="button" href="#">
-    Solicitar un servicio
-  </a>
+  <Header />
+  <Hero client:load />
+  <GridServices />
+  <div class="container">
+    <About />
+    <Zones />
+  </div>
+  <Banner />
+  <Counter />
+  <div class="container">
+    <Clients />
+    <Gallery client:load/>
+  </div>
+  <Partners />
+  <Contact />
+  <Footer />
 </Layout>
+
+<style>
+  @media (min-width: 768px) {
+    .container {
+      max-width: 120rem;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 2fr;
+      margin-bottom: var(--espacio);
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+</style>

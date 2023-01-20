@@ -1,0 +1,72 @@
+---
+import { IoRibbonOutline, IoThumbsUpOutline, IoStarOutline } from 'react-icons/io5/index.js'
+---
+
+<section>
+
+  <div class="item">
+    <IoRibbonOutline />
+    <p>1000</p>
+    <h4>Clientes satisfechos</h4>
+  </div>
+
+  <div class="item">
+    <IoThumbsUpOutline />
+    <p>2000</p>
+    <h4>Clientes satisfechos</h4>
+  </div>
+
+  <div class="item">
+    <IoStarOutline />
+    <p>10</p>
+    <h4>Años de experiencia</h4>
+  </div>
+
+</section>
+
+<style>
+  section {
+    padding: var(--espacio) 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  p {
+    font-size: 5rem;
+    font-weight: var(--font-sm);
+    line-height: 0;
+    margin: 0;
+  }
+
+  :global(.item svg) {
+    font-size: 4rem;
+    color: var(--naranja-claro);
+  }
+  
+  h4 {
+    margin: 0;
+    font-weight: var(--font-normal);
+    font-size: 1.6rem;
+  }
+
+  @media (min-width: 768px) {
+    section {
+      max-width: 120rem;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+</style>

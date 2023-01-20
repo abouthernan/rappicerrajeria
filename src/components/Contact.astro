@@ -1,0 +1,80 @@
+---
+import { IoCallOutline, IoMailOutline, IoLocationOutline } from 'react-icons/io5/index.js'
+---
+
+<section>
+
+  <div class="container">
+    <div class="item">
+       <IoCallOutline />
+      <p>3142902212</p>
+      <h4>Contáctanos</h4>
+    </div>
+
+    <div class="item">
+      <IoMailOutline />
+      <p>hola@rappicerrajeria.com</p>
+      <h4>Escríbenos</h4>
+    </div>
+
+    <div class="item">
+      <IoLocationOutline />
+      <p>Bogotá, Colombia</p>
+      <h4>Atención al cliente</h4>
+    </div>
+  </div>
+
+</section>
+
+<style>
+  section {
+    padding: var(--espacio) 2rem;
+    background: var(--azul-oscuro);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  p {
+    font-size: 2.4rem;
+    font-weight: var(--font-sm);
+    line-height: 0;
+    margin: 0;
+    color: var(--blanco);
+  }
+
+  :global(.item svg) {
+    font-size: 4rem;
+    color: var(--naranja-claro);
+  }
+  
+  h4 {
+    margin: 0;
+    font-weight: var(--font-normal);
+    font-size: 1.6rem;
+        color: var(--blanco);
+  }
+
+    @media (min-width: 768px) {
+    .container {
+      max-width: 120rem;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+</style>

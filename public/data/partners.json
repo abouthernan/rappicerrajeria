@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "image": "/partners/tover.jpg",
+    "alt": "puede ser una imagen del logo de tover"
+  },
+  {
+    "id": 2,
+    "image": "/partners/yale.jpg",
+    "alt": "puede ser una imagen del logo de yale"
+  },
+  {
+    "id": 3,
+    "image": "/partners/assa.jpg",
+    "alt": "puede ser una imagen del logo de assa"
+  },
+  {
+    "id": 4,
+    "image": "/partners/cisa.jpg",
+    "alt": "puede ser una imagen del logo de cisa"
+  },
+  {
+    "id": 5,
+    "image": "/partners/croix.jpg",
+    "alt": "puede ser una imagen del logo de croix"
+  },
+  {
+    "id": 6,
+    "image": "/partners/kl-security.jpg",
+    "alt": "puede ser una imagen del logo de kl-security"
+  },
+  {
+    "id": 7,
+    "image": "/partners/medeco.jpg",
+    "alt": "puede ser una imagen del logo de medeco"
+  }
+]

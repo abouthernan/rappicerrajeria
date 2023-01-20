@@ -1,0 +1,23 @@
+section {
+  padding: var(--espacio) 2rem;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-weight: var(--font-normal);
+  text-align: center;
+}
+
+.swiperGallery {
+  width: 30rem;
+  height: 30rem;
+  margin: 5rem auto 2rem;
+}
+
+.swiperGallery .swiper-slide {
+  border-radius: 1rem;
+}
+
+.swiperGallery .swiper-pagination-fraction {
+  color: var(--blanco);
+}
