@@ -1,42 +1,42 @@
 [
   {
     "id": 1,
-    "image": "/services/1.jpg",
+    "image": "services/1.jpg",
     "title": "Puertas de seguridad / Especialistas en Multilock",
     "description": "Somos expertos en cerraduras Multilock. Máxima seguridad y control de acceso",
     "alt": "puede ser una imagen de puertas de seguridad"
   },
   {
     "id": 2,
-    "image": "/services/2.jpg",
+    "image": "services/2.jpg",
     "title": "Apertura de cerraduras / Cambio de guardas",
     "description": "¿Necesitas entrar a tu casa o cambiar las guardas? No te preocupes, nosotros te ayudamos.",
     "alt": "puede ser una imagen de apertura de cerraduras"
   },
   {
     "id": 3,
-    "image": "/services/3.jpg",
+    "image": "services/3.jpg",
     "title": "Apertura de autos",
     "description": "¿Dejaste las llaves dentro del auto? ¡Calma! En un momento llegaremos para ayudarte.",
     "alt": "puede ser una imagen de una puerta de carro"
   },
   {
     "id": 4,
-    "image": "/services/4.jpg",
+    "image": "services/4.jpg",
     "title": "Apertura de puertas / Brazos hidráulicos",
     "description": "Somos expertos en mecanismos de brazos hidráulicos.",
     "alt": "puede ser una imagen de una puerta con un brazo hidráulico"
   },
   {
     "id": 5,
-    "image": "/services/5.jpg",
+    "image": "services/5.jpg",
     "title": "Venta y suministro",
     "description": "Encuentra aquí las mejores marcas de cerraduras y accesorios.",
     "alt": "puede ser una imagen de dos personas sonriendo"
   },
   {
     "id": 6,
-    "image": "/services/6.jpg",
+    "image": "services/6.jpg",
     "title": "Instalación y mantenimiento",
     "description": "Instalación, mantenimiento y reparación de cerraduras y puertas.",
     "alt": "puede ser una imagen de una puerta"
