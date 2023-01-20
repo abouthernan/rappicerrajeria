@@ -4,7 +4,7 @@ import { Pagination, Autoplay, EffectCards } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/effect-cards'
-import styles from '../styles/gallery.modules.css'
+import styles from 'src/styles/gallery.modules.css'
 import gallery from '../../public/data/gallery.json'
 
 export function Gallery() {
