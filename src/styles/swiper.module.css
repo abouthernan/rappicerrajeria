@@ -8,11 +8,11 @@
 }
 
 :global(.swiper__one) {
-  background-image: url('/hero-one.jpg');
+  background-image: url('/hero-one.webp');
 }
 
 :global(.swiper__two) {
-  background-image: url('/hero-two.jpg');
+  background-image: url('/hero-two.webp');
 }
 
 .overlay {
