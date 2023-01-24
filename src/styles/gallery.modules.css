@@ -1,6 +1,6 @@
 section {
   padding: var(--espacio) 2rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h2 {

@@ -7,10 +7,14 @@ import 'swiper/css/effect-cards'
 import styles from '../styles/gallery.modules.css'
 import gallery from '../../public/data/gallery.json'
 
-export function Gallery() {
+export function Gallery({ route = 'main' }) {
+  const path = route === 'services' ? '/' : ''
   return (
-    <section className={styles.section}>
-      <h2 className={styles.h2}>Servicio garantizado</h2>
+    <section
+      className={styles.section}
+      style={path ? { padding: 0, margin: '-1rem 0 1rem' } : {}}
+    >
+      {!path && <h2 className={styles.h2}>Servicio garantizado</h2>}
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
@@ -24,7 +28,7 @@ export function Gallery() {
       >
         {gallery.map(({ id, image, alt }) => (
           <SwiperSlide key={id}>
-            <img src={image} alt={alt} width={300} height={300} />
+            <img src={`${path}${image}`} alt={alt} width={300} height={300} />
           </SwiperSlide>
         ))}
       </Swiper>

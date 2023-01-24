@@ -1,0 +1,19 @@
+---
+export interface Props {
+  placeholder: string;
+  url: string;
+}
+
+const { placeholder, url } = Astro.props;
+---
+
+<a href={url} class="button">{placeholder}</a>
+
+<style>
+  a {
+    background: var(--morado-claro);
+    color: var(--blanco);
+    width: 100%;
+    z-index: 1!important;
+  }
+</style>
