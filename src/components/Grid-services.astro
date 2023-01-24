@@ -4,8 +4,8 @@ import services from '../../public/data/services-grid.json'
 
 <div class="grid">
   {
-    services.map(({ image, title, description, alt }) => (
-      <div class="card">
+    services.map(({ image, title, description, alt, url }) => (
+      <a href={url} class="card">
         <div class="card__picture">
           <img class="card__img" src={image} alt={alt}>
         </div>
@@ -13,7 +13,7 @@ import services from '../../public/data/services-grid.json'
           <h2 class="card__title">{title}</h2>
           <p class="card__description">{description}</p>
         </article>
-      </div>
+      </a>
     ))
   }
 </div>

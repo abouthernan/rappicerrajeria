@@ -1,4 +1,13 @@
-<article>
+---
+export interface Props {
+  route: string;
+}
+
+const { route } = Astro.props;
+const path = route === 'services'
+---
+
+<article class={path ? 'testimonials' : ''}>
   <h3>Ellos han confiado en nosotros</h3>
   <p>El trabajo fue perfecto, llegaron a tiempo y lo solucionaron muy rápido.</p>
   <b>Juan Días</b>
@@ -37,6 +46,12 @@
   b {
     font-size: 2rem;
     font-weight: var(--font-normal);
+  }
+
+  @media (min-width: 768px) {
+    .testimonials {
+      order: 1;
+    }
   }
 
 </style>

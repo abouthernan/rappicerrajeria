@@ -6,7 +6,7 @@ export interface Props {
 import partners from '../../public/data/partners.json'
 
 const { route } = Astro.props
-const path = route === 'services' ? '/' : ''
+const path = route === 'servicios' ? '/' : ''
 ---
 
 <article>
@@ -51,4 +51,9 @@ const path = route === 'services' ? '/' : ''
     object-fit: contain;
   }
 
+  @media (min-width: 768px) {
+    article {
+      order: 2;
+    }
+  }
 </style>

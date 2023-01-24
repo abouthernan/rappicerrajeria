@@ -3,11 +3,12 @@ export interface Props {
   route: string;
 }
 
-import { IoPhonePortraitOutline } from 'react-icons/io5/index.js'
+import { IoPhonePortraitOutline, IoHomeOutline } from 'react-icons/io5/index.js'
 import { Burger } from '../components/Burger.jsx'
 
 const { route } = Astro.props
-const pathLogo = route === 'services' ? '/logo.webp' : 'logo.webp'
+const pathLogo = route === 'servicios' ? '/logo.webp' : 'logo.webp'
+const path = route === 'servicios' ? '/' : ''
 ---
 
 <header class="header">
@@ -17,10 +18,22 @@ const pathLogo = route === 'services' ? '/logo.webp' : 'logo.webp'
   </div>
 
   <nav class="nav">
-    <a href="https://rappicerrajeria.com" class="nav__url">Servicios</a>
+    <a href="/" class="nav__url">Inicio</a>
+    <a href={`${path}servicios/puertas-de-seguridad`} class="nav__url">Puertas de seguridad</a>
+    <a href={`${path}servicios/apertura-cerraduras-cambio-de-guardas`} class="nav__url">Apertura de cerraduras - Cambio de guardas</a>
+    <a href={`${path}servicios/apertura-de-autos`} class="nav__url">Apertura de autos</a>
+    <a href={`${path}servicios/apertura-de-puertas-brazos-hidraulicos`} class="nav__url">Apertura de puertas - Brazos hidráulicos</a>
+    <a href={`${path}servicios/venta-y-suministro`} class="nav__url">Venta y suministro</a>
+    <a href={`${path}servicios/instalacion-y-mantenimiento`} class="nav__url">Instalación y mantenimiento</a>
   </nav> 
 
   <ul class="contacts">
+    <li>
+      <a href="/">
+        <IoHomeOutline/>
+        Inicio 
+      </a>
+    </li>
     <li>
       <a href="#">
         <IoPhonePortraitOutline/>
@@ -46,10 +59,11 @@ const pathLogo = route === 'services' ? '/logo.webp' : 'logo.webp'
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    height: 8rem;
   }
 
   .logo {
-    height: 6rem;
+    height: 4.5rem;
   }
 
   .logo__img {
@@ -77,6 +91,9 @@ const pathLogo = route === 'services' ? '/logo.webp' : 'logo.webp'
     align-items: center;
     transition: transform 0.3s ease-in-out;
     z-index: 2;
+    padding: 0 2rem;
+    gap: 1.5rem;
+    text-align: center;
   }
 
   :has(.burger.active) nav {
@@ -89,7 +106,7 @@ const pathLogo = route === 'services' ? '/logo.webp' : 'logo.webp'
 
   .nav__url {
     color: var(--amarillo);
-    font-size: 2rem;
+    font-size: 1.8rem;
     transition: all 0.3s ease;
     cursor: pointer;
   }
@@ -100,6 +117,10 @@ const pathLogo = route === 'services' ? '/logo.webp' : 'logo.webp'
   }
 
   @media (min-width: 768px) {
+
+    .logo {
+      height: 6rem;
+    }
   
     .nav {
       display: none;

@@ -47,8 +47,10 @@ const {
     </main>
     <Zones route={route}/>
     <Payments />
-    <Partners route={route} />
-    <Clients />
+    <div class="grid">
+      <Partners route={route} />
+      <Clients route={route} />
+    </div>
     <Footer />
 	</body>
 </html>
@@ -75,11 +77,10 @@ const {
   main::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 8rem;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1048%26quot%3b)' fill='none'%3e%3cpath d='M -1880.2242932815811%2c103 C -1592.22%2c145.4 -1016.22%2c280.2 -440.224293281581%2c315 C 135.78%2c349.8 623.73%2c244.8 999.775706718419%2c277 C 1375.82%2c309.2 1351.96%2c436.2 1440%2c476' stroke='rgba(3%2c 3%2c 23%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -2115.9622544408767%2c393 C -1827.96%2c339 -1251.96%2c115.4 -675.9622544408768%2c123 C -99.96%2c130.6 340.85%2c440.8 764.0377455591232%2c431 C 1187.23%2c421.2 1304.81%2c145.4 1440%2c74' stroke='rgba(3%2c 3%2c 23%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -2738.926835129528%2c469 C -2450.93%2c378.4 -1874.93%2c7.8 -1298.9268351295282%2c16 C -722.93%2c24.2 -406.71%2c508.2 141.07316487047183%2c510 C 688.86%2c511.8 1180.21%2c122 1440%2c25' stroke='rgba(3%2c 3%2c 23%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -497.2046764691655%2c264 C -209.2%2c276 366.8%2c343.2 942.7953235308345%2c324 C 1518.8%2c304.8 2283.35%2c137.8 2382.7953235308346%2c168 C 2482.24%2c198.2 1628.56%2c413.6 1440%2c475' stroke='rgba(3%2c 3%2c 23%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -512.545044246703%2c314 C -224.55%2c275.8 351.45%2c123.8 927.454955753297%2c123 C 1503.45%2c122.2 2264.95%2c288.2 2367.454955753297%2c310 C 2469.96%2c331.8 1625.49%2c247.6 1440%2c232' stroke='rgba(3%2c 3%2c 23%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -823.6681816491313%2c370 C -535.67%2c339.8 40.33%2c214 616.3318183508687%2c219 C 1192.33%2c224 1891.6%2c415 2056.3318183508686%2c395 C 2221.07%2c375 1563.27%2c174.2 1440%2c119' stroke='rgba(3%2c 3%2c 23%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1048'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
     background-size: contain;
     background-repeat: no-repeat;
@@ -91,15 +92,57 @@ const {
     text-transform: uppercase;
     font-weight: var(--font-md);
     color: hsla(0, 0%, 0%, 0.5);
+    max-width: 75ch;
   }
 
   h1 {
     margin: 0;
+    max-width: 75ch;
+    color: var(--morado-claro);
+    text-align: center;
+    line-height: 1.2;
   }
 
   p {
     text-align: center;
     margin-top: .5rem;
+    max-width: 75ch;
+    color: var(--morado-claro);
+  }
+
+  @media (min-width: 768px) {
+    main {
+      margin: 0 auto;
+      margin-top: calc(8rem + 5rem);
+      background-size: cover;
+    }
+
+    main::before {
+      background-size: contain;
+      opacity: .1;
+    }
+
+    span {
+      font-size: 2rem;
+    }
+
+    h1 {
+      font-size: 4.8rem;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1.8rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+      max-width: 120rem;
+      margin: 0 auto;
+    }
+
   }
 
 </style>

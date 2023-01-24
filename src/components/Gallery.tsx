@@ -8,7 +8,7 @@ import styles from '../styles/gallery.modules.css'
 import gallery from '../../public/data/gallery.json'
 
 export function Gallery({ route = 'main' }) {
-  const path = route === 'services' ? '/' : ''
+  const path = route === 'servicios' ? '/' : ''
   return (
     <section
       className={styles.section}
