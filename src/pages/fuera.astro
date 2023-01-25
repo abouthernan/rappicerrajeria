@@ -17,7 +17,7 @@ import Footer from "../components/Footer.astro";
 <Layout title="Rappicerrajería - 24/7">
   <Header route="main"/>
   <Hero client:load />
-  <GridServices />
+  <GridServices route="main" />
   <div class="container">
     <About />
     <Zones />
@@ -25,10 +25,10 @@ import Footer from "../components/Footer.astro";
   <Banner />
   <Counter />
   <div class="container">
-    <Clients />
+    <Clients route="main"/>
     <Gallery client:load/>
   </div>
-  <Partners />
+  <Partners route="main" />
   <Contact />
   <Footer />
 </Layout>

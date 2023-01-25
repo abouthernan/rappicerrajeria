@@ -7,20 +7,19 @@ import { IoPhonePortraitOutline, IoHomeOutline } from 'react-icons/io5/index.js'
 import { Burger } from '../components/Burger.jsx'
 
 const { route } = Astro.props
-const pathLogo = route === 'servicios' ? '/logo.webp' : 'logo.webp'
 const path = route === 'servicios' ? '/' : ''
 ---
 
 <header class="header">
 
-  <div class="logo">
-    <img class="logo__img" src={pathLogo} alt="puede ser una imagen del logo de rappicerrajería">
-  </div>
+  <a href="/" class="logo">
+    <img class="logo__img" src={`${path}logo.webp`} alt="puede ser una imagen del logo de rappicerrajería">
+  </a>
 
   <nav class="nav">
     <a href="/" class="nav__url">Inicio</a>
     <a href={`${path}servicios/puertas-de-seguridad`} class="nav__url">Puertas de seguridad</a>
-    <a href={`${path}servicios/apertura-cerraduras-cambio-de-guardas`} class="nav__url">Apertura de cerraduras - Cambio de guardas</a>
+    <a href={`${path}servicios/apertura-cerraduras`} class="nav__url">Apertura de cerraduras - Cambio de guardas</a>
     <a href={`${path}servicios/apertura-de-autos`} class="nav__url">Apertura de autos</a>
     <a href={`${path}servicios/apertura-de-puertas-brazos-hidraulicos`} class="nav__url">Apertura de puertas - Brazos hidráulicos</a>
     <a href={`${path}servicios/venta-y-suministro`} class="nav__url">Venta y suministro</a>
@@ -35,13 +34,13 @@ const path = route === 'servicios' ? '/' : ''
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="tel:573142902212">
         <IoPhonePortraitOutline/>
         Bogotá: 3142902212
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="tel:573212258228">
         <IoPhonePortraitOutline/>
         Aledaños: 3212258228
       </a>

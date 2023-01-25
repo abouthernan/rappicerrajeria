@@ -5,7 +5,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/effect-cards'
 import styles from '../styles/gallery.modules.css'
-import gallery from '../../public/data/gallery.json'
+import gallery from '../data/gallery.json'
 
 export function Gallery({ route = 'main' }) {
   const path = route === 'servicios' ? '/' : ''

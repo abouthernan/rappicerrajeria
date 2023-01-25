@@ -9,17 +9,17 @@ import Payments from '../components/Payments.astro';
 import Partners from '../components/Partners.astro';
 import Clients from '../components/Clients.astro';
 import Footer from '../components/Footer.astro';
+import Content from '../components/Content.astro';
 
 export interface Props {
   content: {
     title: string;
     route: string;
-    description: string;
   }
 }
 
 const {
-  content: { title, route, description }
+  content: { title, route }
 } = Astro.props
 
 ---
@@ -40,8 +40,10 @@ const {
     <Header route={route}/>
     <main>
       <span>Servicio</span>
+      <Content>
       <h1>{title}</h1>
-      <p>{description}</p>
+        <slot/>
+      </Content>
       <Button url="#" placeholder="¡Llama ahora!" />
       <Gallery client:load route={route} />
     </main>
@@ -92,22 +94,14 @@ const {
     text-transform: uppercase;
     font-weight: var(--font-md);
     color: hsla(0, 0%, 0%, 0.5);
-    max-width: 75ch;
+    text-align: center;
   }
 
   h1 {
     margin: 0;
-    max-width: 75ch;
     color: var(--morado-claro);
     text-align: center;
     line-height: 1.2;
-  }
-
-  p {
-    text-align: center;
-    margin-top: .5rem;
-    max-width: 75ch;
-    color: var(--morado-claro);
   }
 
   @media (min-width: 768px) {

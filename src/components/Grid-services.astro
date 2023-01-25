@@ -1,11 +1,18 @@
 ---
-import services from '../../public/data/services-grid.json'
+export interface Props {
+  route: string;
+}
+
+import services from '../data/services-grid.json'
+
+const { route } = Astro.props;
+const path = route === 'servicios' ? '/' : ''
 ---
 
 <div class="grid">
   {
     services.map(({ image, title, description, alt, url }) => (
-      <a href={url} class="card">
+      <a href={`${path}${url}`} class="card">
         <div class="card__picture">
           <img class="card__img" src={image} alt={alt}>
         </div>

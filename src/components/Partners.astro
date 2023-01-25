@@ -3,7 +3,7 @@ export interface Props {
   route: string;
 }
 
-import partners from '../../public/data/partners.json'
+import partners from '../data/partners.json'
 
 const { route } = Astro.props
 const path = route === 'servicios' ? '/' : ''
@@ -13,8 +13,8 @@ const path = route === 'servicios' ? '/' : ''
   <h2>Trabajamos con los mejores</h2>
   <div class="content">
     {
-      partners.map(({ id, image, alt}) => (
-        <div class="item" key={id}>
+      partners.map(({ image, alt}) => (
+        <div class="item" >
           <img src={`${path}${image}`} alt={alt}>
         </div>
       ))
