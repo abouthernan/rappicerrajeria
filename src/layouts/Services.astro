@@ -10,6 +10,7 @@ import Partners from '../components/Partners.astro';
 import Clients from '../components/Clients.astro';
 import Footer from '../components/Footer.astro';
 import Content from '../components/Content.astro';
+import ContactButton from '../components/button/ContactButton.astro';
 
 export interface Props {
   content: {
@@ -53,6 +54,7 @@ const {
       <Partners route={route} />
       <Clients route={route} />
     </div>
+    <ContactButton zone="bogota" route={route} />
     <Footer />
 	</body>
 </html>

@@ -1,0 +1,54 @@
+---
+export interface Props {
+  zone: 'bogota' | 'fuera';
+  route: string;
+}
+
+const { zone, route } = Astro.props;
+
+const BOGOTA = {
+  tel: '3142902212'
+}
+
+const FUERA = {
+  tel: '3214561217'
+}
+
+const contactNumber = zone === 'bogota' ? BOGOTA.tel : FUERA.tel;
+const path = route === 'servicios' ? '/' : ''
+---
+
+<div>
+  <a href={`tel:${contactNumber}`}>
+    <img src={`${path}tel.png`} alt="puede ser un icono de un telefono">
+  </a>
+
+  <a href={`https://api.whatsapp.com/send?phone=57${contactNumber}&text=Hola, buen día.`}>
+    <img src={`${path}whatsapp.svg`} alt="puede ser un icono de whatsapp">
+  </a>
+</div>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 5;
+    gap: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+</style>

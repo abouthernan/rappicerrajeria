@@ -2,7 +2,7 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
-
+import ContactButton from "../components/button/ContactButton.astro";
 ---
 
 <Layout title="Rappicerrajería - Página no encontrada">
@@ -12,6 +12,7 @@ import Layout from "../layouts/Layout.astro";
     <p>La página que buscas no existe</p>
     <a href="/" class="button">Ir atrás</a>
   </main>
+  <ContactButton zone="bogota" route="main" />
   <Footer />
 </Layout>
 
