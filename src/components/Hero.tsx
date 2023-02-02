@@ -15,7 +15,7 @@ export function Hero() {
       pagination={{ clickable: true }}
       modules={[Pagination, Autoplay, EffectFade]}
       effect="fade"
-      // autoplay={{ delay: 3000, disableOnInteraction: false }}
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
       className="mySwiper"
       grabCursor={true}
     >
