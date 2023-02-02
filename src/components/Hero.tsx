@@ -1,3 +1,8 @@
+export interface Props {
+  phone: string;
+  zone: string;
+}
+
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay, EffectFade } from 'swiper'
@@ -6,7 +11,8 @@ import 'swiper/css/pagination'
 import 'swiper/css/effect-fade'
 import styles from '../styles/swiper.module.css'
 
-export function Hero({ phone }) {
+export function Hero({ phone, zone }) {
+  const path = zone === 'fuera' ? '/' : ''
   return (
     <Swiper
       spaceBetween={0}
@@ -41,42 +47,42 @@ export function Hero({ phone }) {
                 <li className={styles.payments__item}>
                   <img
                     className={styles.payments__img}
-                    src="payments/american-express.webp"
+                    src={`${path}payments/american-express.webp`}
                     alt="puede ser una imagen con el logo de la franquicia american express"
                   />
                 </li>
                 <li className={styles.payments__item}>
                   <img
                     className={styles.payments__img}
-                    src="payments/master-card.webp"
+                    src={`${path}payments/master-card.webp`}
                     alt="puede ser una imagen con el logo de la franquicia master card"
                   />
                 </li>
                 <li className={styles.payments__item}>
                   <img
                     className={styles.payments__img}
-                    src="payments/visa.webp"
+                    src={`${path}payments/visa.webp`}
                     alt="puede ser una imagen con el logo de la franquicia visa"
                   />
                 </li>
                 <li className={styles.payments__item}>
                   <img
                     className={styles.payments__img}
-                    src="payments/diners-club.webp"
+                    src={`${path}payments/diners-club.webp`}
                     alt="puede ser una imagen con el logo de la franquicia diners club"
                   />
                 </li>
                 <li className={styles.payments__item}>
                   <img
                     className={styles.payments__img}
-                    src="payments/nequi.webp"
+                    src={`${path}payments/nequi.webp`}
                     alt="puede ser una imagen con el logo de la franquicia nequi a blanco y negro"
                   />
                 </li>
                 <li className={styles.payments__item}>
                   <img
                     className={styles.payments__img}
-                    src="payments/daviplata.webp"
+                    src={`${path}payments/daviplata.webp`}
                     alt="puede ser una imagen con el logo de la franquicia daviplata a blanco y negro"
                   />
                 </li>

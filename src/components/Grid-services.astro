@@ -6,8 +6,8 @@ export interface Props {
 
 import services from '../data/services-grid.json'
 
-const { route } = Astro.props;
-const path = route === 'servicios' ? '/' : ''
+const { route, zone } = Astro.props;
+const path = route === 'servicios' || zone === 'fuera' ? '/' : ''
 ---
 
 <div class="grid">
@@ -15,7 +15,7 @@ const path = route === 'servicios' ? '/' : ''
     services.map(({ image, title, description, alt, url }) => (
       <a href={`${path}${url}`} class="card">
         <div class="card__picture">
-          <img class="card__img" src={image} alt={alt}>
+          <img class="card__img" src={`${path}${image}`} alt={alt}>
         </div>
         <article class="card__content">
           <h2 class="card__title">{title}</h2>

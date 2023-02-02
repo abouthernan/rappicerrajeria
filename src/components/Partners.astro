@@ -1,12 +1,13 @@
 ---
 export interface Props {
   route: string;
+  zone: string;
 }
 
 import partners from '../data/partners.json'
 
-const { route } = Astro.props
-const path = route === 'servicios' ? '/' : ''
+const { route, zone } = Astro.props
+const path = route === 'servicios' || zone === 'fuera' ? '/' : ''
 ---
 
 <article>

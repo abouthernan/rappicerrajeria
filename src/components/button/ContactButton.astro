@@ -15,7 +15,7 @@ const FUERA = {
 }
 
 const contactNumber = zone === 'bogota' ? BOGOTA.tel : FUERA.tel;
-const path = route === 'servicios' ? '/' : ''
+const path = route === 'servicios' || zone === 'fuera' ? '/' : ''
 ---
 
 <div>

@@ -7,8 +7,8 @@ import 'swiper/css/effect-cards'
 import styles from '../styles/gallery.module.css'
 import gallery from '../data/gallery.json'
 
-export function Gallery({ route = 'main' }) {
-  const path = route === 'servicios' ? '/' : ''
+export function Gallery({ route = 'main', zone }) {
+  const path = route === 'servicios' || zone === 'fuera' ? '/' : ''
   return (
     <section
       className={styles.section}

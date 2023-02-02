@@ -9,7 +9,7 @@ import { IoPhonePortraitOutline, IoHomeOutline } from 'react-icons/io5/index.js'
 import { Burger } from '../components/Burger.jsx'
 
 const { route, zone, phone } = Astro.props
-const path = route === 'servicios' ? '/' : ''
+const path = route === 'servicios' || zone === 'fuera' ? '/' : ''
 const currentUrl = zone === 'bogota' ? '/' : '/fuera'
 ---
 

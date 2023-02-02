@@ -23,7 +23,7 @@ const phone = currentUrl === 'bogota' ? '3142902212' : '3214561217'
 <Layout title="Rappicerrajería - 24/7">
   <TopHeader zone='bogota' />
   <Header route="main" zone="bogota" phone={phone}/>
-  <Hero client:load phone={phone} />
+  <Hero client:load phone={phone} zone="bogota" />
   <GridServices route="main" zone="bogota"/>
   <div class="container">
     <About />
@@ -33,9 +33,9 @@ const phone = currentUrl === 'bogota' ? '3142902212' : '3214561217'
   <Counter />
   <div class="container">
     <Clients route="main" />
-    <Gallery client:load route="main" />
+    <Gallery client:load route="main" zone="bogota" />
   </div>
-  <Partners route="main"/>
+  <Partners route="main" zone="bogota"/>
   <Contact phone={phone} />
   <ContactButton zone="bogota" route="main"/>
   <Footer />
