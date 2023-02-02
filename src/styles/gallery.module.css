@@ -15,7 +15,7 @@
 }
 
 :global(.swiperGallery .swiper-slide) {
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
 
 :global(.swiperGallery .swiper-pagination-fraction) {

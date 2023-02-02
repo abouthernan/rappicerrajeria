@@ -1,4 +1,15 @@
-<section>
+---
+  export interface Props {
+    route: string;
+  }
+
+  const { route } = Astro.props;
+
+  const isBorder = route !== 'servicios' ? 'border' : ''
+
+---
+
+<section class={isBorder}>
   <article>
     <h2>Zonas de Atencion</h2>
     <ul>
@@ -64,6 +75,10 @@
   }
 
   @media (min-width: 768px) {
+    section.border {
+      border-radius: 2rem;
+    }
+
     ul {
       column-count: 4;
     }

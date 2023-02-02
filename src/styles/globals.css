@@ -60,6 +60,7 @@ a {
   width: 100%;
   max-width: var(--max-button);
   text-align: center;
+  border-radius: 1rem;
 }
 
 .burger {
