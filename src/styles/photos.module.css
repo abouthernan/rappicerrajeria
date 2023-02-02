@@ -1,0 +1,17 @@
+.content {
+  margin: 0 auto;
+  padding-bottom: 8rem;
+  max-width: 120rem;
+  overflow: hidden;
+}
+
+:global(.swiperPhotos .swiper-wrapper) {
+  margin: 5rem;
+}
+
+:global(.swiperPhotos .swiper-slide img) {
+  object-fit: cover;
+  border-radius: 2rem;
+  width: 30rem;
+  height: 40rem;
+}

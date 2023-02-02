@@ -14,6 +14,7 @@ import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 import ContactButton from "../components/button/ContactButton.astro";
 import TopHeader from "../components/TopHeader.astro";
+import { Photos } from "../components/Photos";
 
 const currentUrl = Astro.request.url.includes('fuera') ? 'fuera' : 'bogota'
 const phone = currentUrl === 'bogota' ? '3142902212' : '3214561217'
@@ -24,6 +25,7 @@ const phone = currentUrl === 'bogota' ? '3142902212' : '3214561217'
   <Header route="main" zone="fuera" phone={phone}/>
   <Hero client:load phone={phone} zone="fuera"/>
   <GridServices route="main" zone="fuera"/>
+  <Photos zone="fuera" client:load />
   <div class="container">
     <About />
     <Zones />
