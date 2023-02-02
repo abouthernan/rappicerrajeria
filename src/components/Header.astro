@@ -1,23 +1,26 @@
 ---
 export interface Props {
   route: string;
+  zone: string;
+  phone: string;
 }
 
 import { IoPhonePortraitOutline, IoHomeOutline } from 'react-icons/io5/index.js'
 import { Burger } from '../components/Burger.jsx'
 
-const { route } = Astro.props
+const { route, zone, phone } = Astro.props
 const path = route === 'servicios' ? '/' : ''
+const currentUrl = zone === 'bogota' ? '/' : '/fuera'
 ---
 
 <header class="header">
 
-  <a href="/" class="logo">
+  <a href={currentUrl} class="logo">
     <img class="logo__img" src={`${path}logo.webp`} alt="puede ser una imagen del logo de rappicerrajería">
   </a>
 
   <nav class="nav">
-    <a href="/" class="nav__url">Inicio</a>
+    <a href={`${currentUrl}`} class="nav__url">Inicio</a>
     <a href={`${path}servicios/puertas-de-seguridad`} class="nav__url">Puertas de seguridad</a>
     <a href={`${path}servicios/apertura-cerraduras`} class="nav__url">Apertura de cerraduras - Cambio de guardas</a>
     <a href={`${path}servicios/apertura-de-autos`} class="nav__url">Apertura de autos</a>
@@ -28,21 +31,21 @@ const path = route === 'servicios' ? '/' : ''
 
   <ul class="contacts">
     <li>
-      <a href="/">
+      <a href={currentUrl}>
         <IoHomeOutline/>
         Inicio 
       </a>
     </li>
     <li>
-      <a href="tel:573142902212">
+      <a href={`tel:57${phone}`}>
         <IoPhonePortraitOutline/>
-        Bogotá: 3142902212
+        Bogotá: {phone}
       </a>
     </li>
     <li>
-      <a href="tel:573212258228">
+      <a href={`tel:57${phone}`}>
         <IoPhonePortraitOutline/>
-        Aledaños: 3212258228
+        Aledaños: {phone}
       </a>
     </li>
   </ul>

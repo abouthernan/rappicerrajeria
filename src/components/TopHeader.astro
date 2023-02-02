@@ -1,0 +1,38 @@
+---
+export interface Props {
+  zone: string;
+}
+
+const { zone } = Astro.props;
+const path = zone !== 'bogota' ? '/' : '/fuera';
+const title = zone !== 'bogota' ? 'Servicio en Bogotá' : 'Servicio fuera de Bogotá';
+---
+
+<header>
+  <a href={path}>
+    {title} 
+  </a>
+</header>
+
+<style>
+  header {
+    background: var(--morado-oscuro);
+    width: 100%;
+    overflow: hidden;
+  }
+
+  a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 1rem 0; 
+    color: var(--blanco);
+    width: 100%;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--naranja-claro);
+  }
+
+</style>

@@ -1,5 +1,11 @@
 ---
+export interface Props {
+  phone: string
+}
+
 import { IoCallOutline, IoMailOutline, IoLocationOutline } from 'react-icons/io5/index.js'
+
+const { phone } = Astro.props;
 ---
 
 <section>
@@ -7,13 +13,13 @@ import { IoCallOutline, IoMailOutline, IoLocationOutline } from 'react-icons/io5
   <div class="container">
     <div class="item">
        <IoCallOutline />
-      <p>3142902212</p>
+      <a href={`tel:57${phone}`}>{phone}</a>
       <h3>Contáctanos</h3>
     </div>
 
     <div class="item">
       <IoMailOutline />
-      <p>hola@rappicerrajeria.com</p>
+      <a href="mailto:hola@rappicerrajeria.com">hola@rappicerrajeria.com</a>
       <h3>Escríbenos</h3>
     </div>
 
@@ -48,7 +54,7 @@ import { IoCallOutline, IoMailOutline, IoLocationOutline } from 'react-icons/io5
     gap: 3rem;
   }
 
-  p {
+  a, p {
     font-size: 2.4rem;
     font-weight: var(--font-sm);
     line-height: 0;

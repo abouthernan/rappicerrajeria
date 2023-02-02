@@ -7,7 +7,7 @@ export interface Props {
 const { placeholder, url } = Astro.props;
 ---
 
-<a href={url} class="button">{placeholder}</a>
+<a href={`tel:57${url}`} class="button">{placeholder}</a>
 
 <style>
   a {

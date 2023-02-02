@@ -11,6 +11,7 @@ import Clients from '../components/Clients.astro';
 import Footer from '../components/Footer.astro';
 import Content from '../components/Content.astro';
 import ContactButton from '../components/button/ContactButton.astro';
+import TopHeader from '../components/TopHeader.astro';
 
 export interface Props {
   content: {
@@ -22,6 +23,9 @@ export interface Props {
 const {
   content: { title, route }
 } = Astro.props
+
+const currentUrl = Astro.request.url.includes('fuera') ? 'fuera' : 'bogota'
+const phone = currentUrl === 'bogota' ? '3142902212' : '3214561217'
 
 ---
 
@@ -56,14 +60,15 @@ const {
     </script>
 	</head>
 	<body>
-    <Header route={route}/>
+    <TopHeader zone={currentUrl} />
+    <Header route={route} zone={currentUrl} phone={phone}/>
     <main>
       <span>Servicio</span>
       <Content>
       <h1>{title}</h1>
         <slot/>
       </Content>
-      <Button url="#" placeholder="¡Llama ahora!" />
+      <Button url={phone} placeholder="¡Llama ahora!" />
       <Gallery client:load route={route} />
     </main>
     <Zones route={route}/>

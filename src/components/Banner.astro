@@ -1,5 +1,10 @@
 ---
+export interface Props {
+  phone: string;
+}
+
 import { IoCallOutline } from "react-icons/io5/index.js"
+const { phone } = Astro.props;
 ---
 
 <article>
@@ -7,7 +12,7 @@ import { IoCallOutline } from "react-icons/io5/index.js"
     <h3>¡Llegamos en <span>15 Minutos</span>!</h3>
     <div class="contact">
       <IoCallOutline />
-      <a href="#" class="button">¡Pide tu servicio ahora!</a>
+      <a href={`tel:57${phone}`} class="button">¡Pide tu servicio ahora!</a>
     </div>
   </div>
 </article>

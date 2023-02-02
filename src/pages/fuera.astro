@@ -13,24 +13,29 @@ import Partners from "../components/Partners.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 import ContactButton from "../components/button/ContactButton.astro";
+import TopHeader from "../components/TopHeader.astro";
+
+const currentUrl = Astro.request.url.includes('fuera') ? 'fuera' : 'bogota'
+const phone = currentUrl === 'bogota' ? '3142902212' : '3214561217'
 ---
 
 <Layout title="Rappicerrajería - 24/7">
-  <Header route="main"/>
-  <Hero client:load />
-  <GridServices route="main" />
+  <TopHeader zone="fuera"/>
+  <Header route="main" zone="fuera" phone={phone}/>
+  <Hero client:load phone={phone}/>
+  <GridServices route="main" zone="fuera"/>
   <div class="container">
     <About />
     <Zones />
   </div>
-  <Banner />
+  <Banner phone={phone} />
   <Counter />
   <div class="container">
     <Clients route="main"/>
     <Gallery client:load/>
   </div>
   <Partners route="main" />
-  <Contact />
+  <Contact phone={phone} />
   <ContactButton zone="fuera" route="main"/>
   <Footer />
 </Layout>

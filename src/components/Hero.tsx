@@ -6,7 +6,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/effect-fade'
 import styles from '../styles/swiper.module.css'
 
-export function Hero() {
+export function Hero({ phone }) {
   return (
     <Swiper
       spaceBetween={0}
@@ -27,7 +27,7 @@ export function Hero() {
             </h2>
 
             <a
-              href="tel:3142902212"
+              href={`tel:57${phone}`}
               className={`button ${styles.swiper__button}`}
             >
               Llamar ahora
@@ -95,7 +95,7 @@ export function Hero() {
             </h2>
 
             <a
-              href="tel:3142902212"
+              href={`tel:57${phone}`}
               className={`button button__oscure ${styles.swiper__button}`}
             >
               Solicitar servicio
