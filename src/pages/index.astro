@@ -25,11 +25,11 @@ const phone = currentUrl === 'bogota' ? '3142902212' : '3214561217'
   <TopHeader zone='bogota' />
   <Header route="main" zone="bogota" phone={phone}/>
   <Hero client:load phone={phone} zone="bogota" />
-  <GridServices route="main" zone="bogota"/>
   <Photos zone="bogota" client:load />
+  <GridServices route="main" zone="bogota"/>
   <div class="container">
     <About />
-    <Zones />
+    <Zones route="main" />
   </div>
   <Banner phone={phone}/>
   <Counter />
