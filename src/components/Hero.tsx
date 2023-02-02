@@ -15,7 +15,7 @@ export function Hero() {
       pagination={{ clickable: true }}
       modules={[Pagination, Autoplay, EffectFade]}
       effect="fade"
-      autoplay={{ delay: 3000, disableOnInteraction: false }}
+      // autoplay={{ delay: 3000, disableOnInteraction: false }}
       className="mySwiper"
       grabCursor={true}
     >
@@ -41,29 +41,43 @@ export function Hero() {
                 <li className={styles.payments__item}>
                   <img
                     className={styles.payments__img}
-                    src="payments/american-express.png"
+                    src="payments/american-express.webp"
                     alt="puede ser una imagen con el logo de la franquicia american express"
                   />
                 </li>
                 <li className={styles.payments__item}>
                   <img
                     className={styles.payments__img}
-                    src="payments/master-card.png"
+                    src="payments/master-card.webp"
                     alt="puede ser una imagen con el logo de la franquicia master card"
                   />
                 </li>
                 <li className={styles.payments__item}>
                   <img
                     className={styles.payments__img}
-                    src="payments/visa.png"
+                    src="payments/visa.webp"
                     alt="puede ser una imagen con el logo de la franquicia visa"
                   />
                 </li>
                 <li className={styles.payments__item}>
                   <img
                     className={styles.payments__img}
-                    src="payments/diners-club.png"
+                    src="payments/diners-club.webp"
                     alt="puede ser una imagen con el logo de la franquicia diners club"
+                  />
+                </li>
+                <li className={styles.payments__item}>
+                  <img
+                    className={styles.payments__img}
+                    src="payments/nequi.webp"
+                    alt="puede ser una imagen con el logo de la franquicia nequi a blanco y negro"
+                  />
+                </li>
+                <li className={styles.payments__item}>
+                  <img
+                    className={styles.payments__img}
+                    src="payments/daviplata.webp"
+                    alt="puede ser una imagen con el logo de la franquicia daviplata a blanco y negro"
                   />
                 </li>
               </ul>

@@ -69,6 +69,11 @@
   color: var(--negro);
 }
 
+.payments {
+  width: 100%;
+  max-width: 50rem;
+}
+
 .payments__info {
   color: var(--blanco);
   font-weight: var(--font-normal);
@@ -79,13 +84,15 @@
 .payments__list {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
-  gap: 1rem;
+  flex-wrap: wrap;
+  place-content: center;
+  margin: 0 auto;
+  padding: 0 2rem;
+  column-gap: 2rem;
 }
 
 .payments__item {
-  width: 6rem;
+  width: 8rem;
   height: 6rem;
 }
 
