@@ -21,7 +21,7 @@ const currentUrl = Astro.request.url.includes('fuera') ? 'fuera' : 'bogota'
 const phone = currentUrl === 'bogota' ? '3142902212' : '3214561217'
 ---
 
-<Layout title="Rappicerrajería - 24/7">
+<Layout title="Rappicerrajería - Bogotá" zone="bogota">
   <TopHeader zone='bogota' />
   <Header route="main" zone="bogota" phone={phone}/>
   <Hero client:load phone={phone} zone="bogota" />
