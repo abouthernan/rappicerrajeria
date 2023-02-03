@@ -28,7 +28,7 @@ export function Gallery({ route = 'main', zone }) {
       >
         {gallery.map(({ id, image, alt }) => (
           <SwiperSlide key={id}>
-            <img src={`${path}${image}`} alt={alt} width={300} height={300} />
+            <img className={styles.img} src={`${path}${image}`} alt={alt} width={300} height={300} />
           </SwiperSlide>
         ))}
       </Swiper>

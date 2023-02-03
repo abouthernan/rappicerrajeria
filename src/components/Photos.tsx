@@ -42,9 +42,9 @@ export function Photos({ route = 'main', zone }) {
           }
         }}
       >
-        {photos.map(({ id, image, alt }) => (
+        {photos.map(({ id, image }) => (
           <SwiperSlide key={id}>
-            <img src={`${path}${image}`} alt={alt} height={600} width={400} />
+            <img src={`${path}${image}`} alt="puede ser una imagen ilustrativa de cerrajeros en bogota" height={600} width={400} />
           </SwiperSlide>
         ))}
       </Swiper>

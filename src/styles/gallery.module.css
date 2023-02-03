@@ -21,3 +21,7 @@
 :global(.swiperGallery .swiper-pagination-fraction) {
   color: var(--blanco);
 }
+
+.img {
+  object-fit: cover;
+}

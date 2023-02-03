@@ -1,28 +1,23 @@
 [
   {
     "id": 1,
-    "image": "gallery/1.jpg",
+    "image": "photos/1.webp",
     "alt": "puede ser una imagen de un cerrajero"
   },
   {
     "id": 2,
-    "image": "gallery/2.jpg",
+    "image": "photos/3.webp",
     "alt": "puede ser una imagen de una puerta"
   },
   {
     "id": 3,
-    "image": "gallery/3.jpg",
+    "image": "photos/7.webp",
     "alt": "puede ser una imagen de una tienda de cerrajeria"
   },
   {
     "id": 4,
-    "image": "gallery/4.jpg",
+    "image": "photos/8.webp",
     "alt": "puede ser una imagen de una puerta con cerradura"
-  },
-  {
-    "id": 5,
-    "image": "gallery/5.jpg",
-    "alt": "puede ser una imagen de una puerta de carro"
   },
   {
     "id": 6,
@@ -31,7 +26,7 @@
   },
   {
     "id": 7,
-    "image": "gallery/7.jpg",
+    "image": "photos/4.webp",
     "alt": "puede ser una imagen de una cerradura con huella"
   }
 ]
