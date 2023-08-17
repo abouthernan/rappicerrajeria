@@ -19,11 +19,11 @@ const path = route === 'servicios' || zone === 'fuera' ? '/' : ''
 ---
 
 <div>
-  <a href={`tel:${contactNumber}`}>
+  <a id="btn-telephone" href={`tel:${contactNumber}`}>
     <img src={`${path}tel.png`} alt="puede ser un icono de un telefono">
   </a>
 
-  <a href={`https://api.whatsapp.com/send?phone=57${contactNumber}&text=Hola Rappicerrajería! Me gustaría cotizar un servicio...`}>
+  <a id="btn-whatsapp" href={`https://api.whatsapp.com/send?phone=57${contactNumber}&text=Hola Rappicerrajería! Me gustaría cotizar un servicio...`}>
     <img src={`${path}whatsapp.svg`} alt="puede ser un icono de whatsapp">
   </a>
 </div>
